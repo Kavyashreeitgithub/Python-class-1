@@ -1,0 +1,334 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM/Dh1woHvtGPZhV8oLPYyO",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Kavyashreeitgithub/Python-class-1/blob/main/Assignment%201\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "fduTGKs8myWO",
+        "outputId": "617c39b1-82d6-4747-94dc-6fd4034df69a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "HELLO WORLD\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"HELLO WORLD\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Print the length of your name::\n",
+        "name=input(\"Enter your name: \")\n",
+        "length=len(name)\n",
+        "print(length)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "scE_ltxpm3XR",
+        "outputId": "39c05a9b-4de8-45dc-b962-e93f970ef05f"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your name: Kavyashree\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Input the names and ages of two people and print their total:\n",
+        "name=input(\"Enter your name: \")\n",
+        "age=int(input(\"Enter your age: \"))\n",
+        "name=input(\"Enter your name: \")\n",
+        "age1=int(input(\"Enter your age: \"))\n",
+        "Sum=int(age+age1)\n",
+        "print(\"The sum of the two ages is\", Sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RaI7or55oZqx",
+        "outputId": "5051aa27-f757-4236-d8c0-bbf12b8ae571"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your name: kavyashree\n",
+            "Enter your age: 18\n",
+            "Enter your name: kavana\n",
+            "Enter your age: 19\n",
+            "The sum of the two ages is 37\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Input three numbers and calcualte their average(mean)\n",
+        "a=int(input(\"Enter a number= \"))\n",
+        "b=int(input(\"Enter a number= \"))\n",
+        "c=int(input(\"Enter a number= \"))\n",
+        "Averagemean=int(a+b+c/3)\n",
+        "print(\"The average mean is: \", Averagemean)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3Mf_AE17uuBC",
+        "outputId": "e2e841db-98e4-4430-b2f9-33e7941eea25"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number= 12\n",
+            "Enter a number= 14\n",
+            "Enter a number= 16\n",
+            "The average mean is:  31\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Enter the dimensions of a rectangular box and calculate its volume:\n",
+        "l=12\n",
+        "b=9\n",
+        "h=12\n",
+        "volume=int(l*b*h)\n",
+        "print(\"The volume of rectangular box is\",volume)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0jW-aFmMv2tW",
+        "outputId": "532eaf3e-6e03-408a-cbfe-07a9aa32d7f8"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The volume of rectangular box is 1296\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Python program to find the HCF of two numbers:\n",
+        "def compute_hcf(x,y):\n",
+        "  #smaller=0\n",
+        "    if x > y:\n",
+        "        smaller = x\n",
+        "    else:\n",
+        "         smaller = y\n",
+        "    for i in range(1, smaller+1):\n",
+        "      if((x % i == 0) and (y % i == 0)):\n",
+        "        hcf=i\n",
+        "    return hcf\n",
+        "a=12\n",
+        "b=14\n",
+        "print(\"The hcf of\",a,\"and\",b,\"is\", compute_hcf(a,b))\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YxfWZhR4xL1n",
+        "outputId": "28c26e0a-e1af-44c1-a1b8-0451ef9f519e"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The hcf of 12 and 14 is 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Draw the pattern::\n",
+        "for i in range(1,6):\n",
+        "  for j in range(1, i+1):\n",
+        "    print(\"*\", end= \"\")\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NFHFQAAXDFoe",
+        "outputId": "87c456a2-8942-42f7-cc04-95e8b29f489d"
+      },
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "***************"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#To find factorial of a number::\n",
+        "def factorial(n):\n",
+        "    return 1 if (n==1 or n==0) else n * factorial(n-1)\n",
+        "\n",
+        "number = 6\n",
+        "print(\"The factorial of\", number, \"is\", factorial(number))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GHTdQdg8DhbI",
+        "outputId": "65cac318-d23e-420f-c057-52f97ffbdc85"
+      },
+      "execution_count": 61,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The factorial of 6 is 720\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Display all duplicate from the list::\n",
+        "l=[10,20,30,10,40,20,40,50,60,30]\n",
+        "dict={i:None for i in l}\n",
+        "l2=list(dict.keys());\n",
+        "print(l2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "PzykMHgJFVoP",
+        "outputId": "d7ae99b1-4fc8-4fdd-deaf-5e1f1dc8883e"
+      },
+      "execution_count": 62,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[10, 20, 30, 40, 50, 60]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#To find the sum of natural numbers::\n",
+        "number=int(input(\"Enter a number: \"))\n",
+        "if number < 0:\n",
+        "  print(\"positive number\")\n",
+        "else:\n",
+        "  sum = 0\n",
+        "\n",
+        "  while(number>0):\n",
+        "    sum += number\n",
+        "    number -= 1\n",
+        "  print(\"The sum is\", sum)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "h-LqMJh4Gbzx",
+        "outputId": "ec46c5b6-1fc1-4517-8f8d-68e4b1b18504"
+      },
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a number: 100\n",
+            "The sum is 5050\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "uNd8hKo7H8BM"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
